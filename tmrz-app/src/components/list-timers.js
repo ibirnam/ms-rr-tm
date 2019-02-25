@@ -12,7 +12,7 @@ class ListTimers extends Component {
     render() {
         return (
             <div>
-                {this.props.timers.map((timer, i) => <TimerView key={i} timer={timer} />)}
+                {this.props.timers.map((timer, i) => <TimerView key={i} timer={timer} index={i} />)}
             </div>
         )
     }

@@ -10,11 +10,19 @@ class TimerView extends Component {
     }
 
     render() {
+
+        const { index, toggleTimer, timer } = this.props
+
         return (
             <div>
-                <h2>{this.props.timer.name}</h2>
-                <h1>{this.props.timer.time}</h1>
-                <button>Start</button>
+                <h2>{timer.name}</h2>
+                <h1>{timer.time}</h1>
+                <button
+                    onClick={(e) => {
+                        toggleTimer(index)
+                    }}>
+                    {timer.isRunning ? "Stop" : "Start"}
+                </button>
             </div>
         )
     }
