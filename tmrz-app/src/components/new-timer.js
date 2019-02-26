@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { addTimer } from '../actions'
 
+import './new-timer.css'
+
 class NewTimer extends Component {
   constructor(props) {
     super(props)
