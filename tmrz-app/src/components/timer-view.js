@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { toggleTimer } from '../actions'
 
+import { formatTime } from '../utils';
+
 class TimerView extends Component {
     constructor(props) {
         super(props)
@@ -16,7 +18,7 @@ class TimerView extends Component {
         return (
             <div>
                 <h2>{timer.name}</h2>
-                <h1>{timer.time}</h1>
+                <h1>{formatTime(timer.time)}</h1>
                 <button
                     onClick={(e) => {
                         toggleTimer(index)

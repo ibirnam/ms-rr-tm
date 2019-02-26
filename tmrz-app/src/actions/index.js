@@ -5,6 +5,14 @@ export const START_TIMER  = "START_TIMER"
 export const STOP_TIMER   = "STOP_TIMER"
 export const TOGGLE_TIMER = "TOGGLE_TIMER"
 export const SELECT_TIMER = "SELECT_TIMER"
+export const UPDATE = "UPDATE"
+
+export const update = (deltaTime) => {
+  return {
+    type: UPDATE,
+    payload: { deltaTime }
+  }
+}
 
 export const addTimer = (name) => {
   return {
